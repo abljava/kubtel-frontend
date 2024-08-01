@@ -9,19 +9,18 @@ import { ContactsInfo } from './contacts-info';
 import { BigRectLinkProps } from '@/components/main-page/big-rect-link';
 import { BigRectLink } from '@/components/main-page/big-rect-link';
 
-
 interface Image {
   src: string;
   srcSmall?: string;
   alt?: string;
 }
 
-export interface SimpleHeroData {
+export interface SimpleHeroDataProps {
   title: string;
   image: Image;
 }
 
-export const simpleHeroData: SimpleHeroData = {
+export const simpleHeroData: SimpleHeroDataProps = {
   title: 'Контакты',
   image: {
     src: '/images/image3.svg',
@@ -31,21 +30,21 @@ export const simpleHeroData: SimpleHeroData = {
 };
 
 const bigRectLinkData: BigRectLinkProps = {
-  url: "/legal",
-  title: "Юридическим лицам",
+  url: '/legal',
+  title: 'Юридическим лицам',
   start: {
-    mobile: "1",
-    tablet: "1",
-    desktop: "9",
+    mobile: '1',
+    tablet: '1',
+    desktop: '9',
   },
   end: {
-    mobile: "13",
-    tablet: "7",
-    desktop: "13",
+    mobile: '13',
+    tablet: '7',
+    desktop: '13',
   },
   image: {
-    src: "/images/icons/briefcase.svg",
-    alt: "Юридическим лицам",
+    src: '/images/icons/briefcase.svg',
+    alt: 'Юридическим лицам',
     width: 40,
     height: 38,
   },
@@ -55,11 +54,11 @@ export default function Contacts() {
   return (
     <>
       <CustomSection>
-        <HeroSectionStatic heroData={simpleHeroData} className='' />
+        <HeroSectionStatic heroData={simpleHeroData} />
         <TopRounder />
       </CustomSection>
       <Map />
-      <CustomSection>
+      <CustomSection className='gap-0'>
         <ContactsInfo />
         <BigRectLink link={bigRectLinkData} />
         <SquareLinksSection />
