@@ -8,44 +8,24 @@ import { TopRounder } from '@/components/top-rounder';
 import { ContactsInfo } from './contacts-info';
 import { BigRectLinkProps } from '@/components/main-page/big-rect-link';
 import { BigRectLink } from '@/components/main-page/big-rect-link';
-
-
-interface Image {
-  src: string;
-  srcSmall?: string;
-  alt?: string;
-}
-
-export interface SimpleHeroData {
-  title: string;
-  image: Image;
-}
-
-export const simpleHeroData: SimpleHeroData = {
-  title: 'Контакты',
-  image: {
-    src: '/images/image3.svg',
-    srcSmall: '/images/hero-bg-contacts-sm.svg',
-    alt: 'Контакты',
-  },
-};
+import { simpleHeroData } from './hero-data';
 
 const bigRectLinkData: BigRectLinkProps = {
-  url: "/legal",
-  title: "Юридическим лицам",
+  url: '/legal',
+  title: 'Юридическим лицам',
   start: {
-    mobile: "1",
-    tablet: "1",
-    desktop: "9",
+    mobile: '1',
+    tablet: '1',
+    desktop: '9',
   },
   end: {
-    mobile: "13",
-    tablet: "7",
-    desktop: "13",
+    mobile: '13',
+    tablet: '7',
+    desktop: '13',
   },
   image: {
-    src: "/images/icons/briefcase.svg",
-    alt: "Юридическим лицам",
+    src: '/images/icons/briefcase.svg',
+    alt: 'Юридическим лицам',
     width: 40,
     height: 38,
   },
