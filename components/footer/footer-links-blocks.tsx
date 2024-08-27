@@ -70,7 +70,7 @@ const aboutLinks: TypeFooterLinksBlock = {
     },
     {
       title: "Контакты",
-      url: "/",
+      url: "/contacts",
     },
     {
       title: "Новости",

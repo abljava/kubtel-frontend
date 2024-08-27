@@ -13,7 +13,12 @@ import { simpleHeroData } from './hero-data';
 const bigRectLinkData: BigRectLinkProps = {
   url: '/legal',
   title: 'Юридическим лицам',
+  url: '/legal',
+  title: 'Юридическим лицам',
   start: {
+    mobile: '1',
+    tablet: '1',
+    desktop: '9',
     mobile: '1',
     tablet: '1',
     desktop: '9',
@@ -22,8 +27,13 @@ const bigRectLinkData: BigRectLinkProps = {
     mobile: '13',
     tablet: '7',
     desktop: '13',
+    mobile: '13',
+    tablet: '7',
+    desktop: '13',
   },
   image: {
+    src: '/images/icons/briefcase.svg',
+    alt: 'Юридическим лицам',
     src: '/images/icons/briefcase.svg',
     alt: 'Юридическим лицам',
     width: 40,
@@ -35,11 +45,11 @@ export default function Contacts() {
   return (
     <>
       <CustomSection>
-        <HeroSectionStatic heroData={simpleHeroData} className='' />
+        <HeroSectionStatic heroData={simpleHeroData} />
         <TopRounder />
       </CustomSection>
       <Map />
-      <CustomSection>
+      <CustomSection className='gap-0'>
         <ContactsInfo />
         <BigRectLink link={bigRectLinkData} />
         <SquareLinksSection />

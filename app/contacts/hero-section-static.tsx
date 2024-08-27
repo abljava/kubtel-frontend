@@ -18,7 +18,6 @@ export function HeroSectionStatic({
   heroData,
   className,
 }: HeroSectionStaticProps) {
-  console.log('heroData', heroData);
   return (
     <div
       className={cn(
@@ -55,7 +54,11 @@ export function HeroSectionStatic({
           />
         </Button>
       </div>
+        </Button>
+      </div>
 
+      <Logo className='absolute bottom-20 left-0 p-0 mx-6 sm:hidden' />
+    </div>
       <Logo className='absolute bottom-20 left-0 p-0 mx-6 sm:hidden' />
     </div>
   );
