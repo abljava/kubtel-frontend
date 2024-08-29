@@ -42,7 +42,7 @@ export function HeroSectionStatic({
         <Button
           variant='kubtel'
           size='md'
-          className='relative z-20 mb-40 w-full'
+          className='relative mb-40 w-full'
         >
           Получить консультацию
           <Image
