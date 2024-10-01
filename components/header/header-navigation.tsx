@@ -18,7 +18,7 @@ const links: NavigationLink[] = [
   },
   {
     title: "О компании",
-    url: "/",
+    url: "/about",
   },
 ];
 

@@ -18,6 +18,19 @@ export function H1({ children, className }: TypeTextProps) {
   );
 }
 
+export function H2({ children, className }: TypeTextProps) {
+  return (
+    <h2
+      className={cn(
+        "text-black text-2xl sm:text-lg md:text-2xl font-bold sm:font-bold",
+        className
+      )}
+    >
+      {children}
+    </h2>
+  );
+}
+
 export function H3({ children, className }: TypeTextProps) {
   return (
     <h3

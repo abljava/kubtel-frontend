@@ -8,16 +8,17 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { H1 } from '@/components/text/text';
 import { SimpleHeroDataProps } from './hero-data';
+import { getStrapiData } from '@/lib/strapi-data';
 
 interface HeroSectionStaticProps {
-  heroData: SimpleHeroDataProps;
+  heroImage: any;
+  title?: string;
   className?: string;
 }
 
-export function HeroSectionStatic({
-  heroData,
-  className,
-}: HeroSectionStaticProps) {
+
+
+export function HeroSectionStatic({ heroImage, title, className }: HeroSectionStaticProps) {
   return (
     <div
       className={cn(
@@ -26,11 +27,11 @@ export function HeroSectionStatic({
       )}
     >
       <div className='relative flex flex-col h-[414px] mx-6 mt-8 justify-between'>
-        <H1 className='relative z-10 ml-2'>Контакты</H1>
+        <H1 className='relative z-10 ml-2'>{title}</H1>
         <div className='absolute w-full h-full  inset-0 p-5 '>
           <Image
-            src={heroData.image.src}
-            alt={heroData.image.alt || ''}
+            src={heroImage}
+            alt='hero'
             style={{
               objectFit: 'cover',
             }}
@@ -42,7 +43,7 @@ export function HeroSectionStatic({
         <Button
           variant='kubtel'
           size='md'
-          className='relative mb-40 w-full md:w-48'
+          className='relative mb-40 w-full md:w-60'
         >
           Получить консультацию
           <Image

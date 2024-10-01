@@ -9,6 +9,18 @@ import { BigRectLinkProps } from '@/components/main-page/big-rect-link';
 import { BigRectLink } from '@/components/main-page/big-rect-link';
 import { simpleHeroData } from './hero-data';
 
+async function getStrapiData(path: string) {
+  const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
+  try {
+    const response = await fetch(`${baseUrl}/${path}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+}
+
 const bigRectLinkData: BigRectLinkProps = {
   url: '/legal',
   title: 'Юридическим лицам',
@@ -30,7 +42,11 @@ const bigRectLinkData: BigRectLinkProps = {
   },
 };
 
-export default function Contacts() {
+export default  async function Contacts() {
+
+  const strapiData = await getStrapiData('api/contacts');
+  console.log(strapiData);
+
   return (
     <>
       <CustomSection>
